@@ -53,5 +53,3 @@ Replace line 37 API key with your API key
 
 
 # example![brave_0a4zJ0eXOn](https://user-images.githubusercontent.com/119671806/231275932-66eff47f-1073-4ce5-a0e4-c90b5ff8a145.gif)
-
-

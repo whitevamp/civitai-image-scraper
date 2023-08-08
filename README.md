@@ -1,4 +1,9 @@
-* Patreon: https://www.patreon.com/sd_hassan
+* credit goes to sd_hassan for the original script.
+# what has changed:
+  1. added in the ability to save to a directory.
+  2. it will now pull up 200 images ( the max amount aloud per the civitai wiki.)
+  3. will itterate through all the pages and download all those images.
+  4. added in some error checking while dowloading the images. so now if it finds an image that error's out (" cannot write mode P as JPEG ") it will now show that url in the console, and continue on downloading the next image.
 
 # civitai-image-scraper
 Downloads bulk images from Civitai that have a reaction count for a specific emoji reaction greater than your variable

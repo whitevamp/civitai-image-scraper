@@ -19,7 +19,9 @@ Outputted results are almost suitable for training. LORA's are included in promp
 
 # How to modify
 Line 21, `directory = "civitai-images"` change to you directory.
+
 Line 23, `parent_dir = "C:\\"` change to you Parent Directory path
+
 Line 37, `api_key = "xxxxxxx"` change to your API key from Civitai account settings.
 
 Line 78, `if image['stats']['heartCount'] > 10`

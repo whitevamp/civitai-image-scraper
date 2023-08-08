@@ -48,7 +48,7 @@ https://github.com/civitai/civitai/wiki/REST-API-Reference#get-apiv1images
 
 Replace line 37 API key with your API key
 
-`python civitai-image.py`
+`python civitai-image-scraper.py`
 
 
 

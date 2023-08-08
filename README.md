@@ -8,8 +8,8 @@
 
 # some errors that you will see in the console.
   1. DecompressionBombWarning: see https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.open
-  2. Error occurred on https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/229fe8e5-b744-4d19-9e22-f366f16f5c88/width=512/229fe8e5-b744-4d19-9e22-f366f16f5c88.jpeg: cannot identify image file <_io.BytesIO object at 0x000001847C062E30> ... (as an example.)
-  3. Error occurred on https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/edb375b8-e520-45f8-15ca-fad3a2b36100/width=2048/edb375b8-e520-45f8-15ca-fad3a2b36100.jpeg: cannot write mode P as JPEG ... (as an example.)
+  2. Error occurred on `https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/229fe8e5-b744-4d19-9e22-f366f16f5c88/width=512/229fe8e5-b744-4d19-9e22-f366f16f5c88.jpeg`: cannot identify image file <_io.BytesIO object at 0x000001847C062E30> ... (as an example.)
+  3. Error occurred on `https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/edb375b8-e520-45f8-15ca-fad3a2b36100/width=2048/edb375b8-e520-45f8-15ca-fad3a2b36100.jpeg`: cannot write mode P as JPEG ... (as an example.)
  
 # civitai-image-scraper
 Downloads bulk images from Civitai that have a reaction count for a specific emoji reaction greater than your variable

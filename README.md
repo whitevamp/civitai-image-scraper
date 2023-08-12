@@ -35,8 +35,8 @@ To use the enhanced script, follow these steps:
 4. Specify the desired directory in the 'directory' variable. Line 18
 5. Specify the desired parent directory in the 'parent_dir' variable. Line 24
 6. You can change the reaction type from heartCount to any other supported in the API.
-      -Line 183 `if image['stats']['heartCount'] > 10`
-         -At the time of this script creation, the supported reaction types are:
+    -Line 183 `if image['stats']['heartCount'] > 10`
+     -At the time of this script creation, the supported reaction types are:
 
         "cryCount"
         "laughCount"
@@ -52,6 +52,3 @@ See [civitai API] (https://github.com/civitai/civitai/wiki/REST-API-Reference#ge
 ## Credits
 
 Original work by Hassan-sd. Enhancements and documentation by whitevamp.
-100. First list item
-       - First nested list item
-         - Second nested list item

@@ -34,7 +34,8 @@ To use the enhanced script, follow these steps:
 3. Replace the 'api_key' variable with your Civitai API key. Line 37
 4. Specify the desired directory in the 'directory' variable. Line 18
 5. Specify the desired parent directory in the 'parent_dir' variable. Line 24
-6. You can change the reaction type from heartCount to any other supported in the API. Line 183 `if image['stats']['heartCount'] > 10`
+6. You can change the reaction type from heartCount to any other supported in the API. Line 183
+   `if image['stats']['heartCount'] > 10`
 At the time of this script creation, the supported reaction types are:
 
         "cryCount"

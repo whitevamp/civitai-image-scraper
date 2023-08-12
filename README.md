@@ -45,10 +45,12 @@ To use the enhanced script, follow these steps:
         "heartCount"
         "commentCount"
          ```
-When I ran this script with a heart count of > 10 it generated 
-14.6 GB and a file count of 167,668, including log files.
-See [civitai API] (https://github.com/civitai/civitai/wiki/REST-API-Reference#get-apiv1images)
-6. Run the script and enjoy!
+    - See [civitai API](https://github.com/civitai/civitai/wiki/REST-API-Reference#get-apiv1images) for more information  <br />
+
+When I ran this script with a heart count of > 10 it generated:  
+ - 14.6 GB and a file count of 167,668, including log files.  
+
+7. Run the script and enjoy!  
 
 ## Credits
 

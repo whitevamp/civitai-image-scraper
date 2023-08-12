@@ -1,55 +1,53 @@
-* credit goes to sd_hassan for the original script.
-  
-# what has changed:
-  1. added in the ability to save to a directory.
-  2. it will now pull up 200 images ( the max amount aloud per the civitai wiki.)
-  3. will itterate through all the pages and download all those images.
-  4. added in some error checking while dowloading the images. so now if it finds an image that error's out (" cannot write mode P as JPEG ") it will now show that url in the console, and continue on downloading the next image.
+# I bring you version 2 and compeate rewrite to the script.
 
-# some errors that you will see in the console.
-  1. DecompressionBombWarning: see https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.open
-  2. Error occurred on `https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/229fe8e5-b744-4d19-9e22-f366f16f5c88/width=512/229fe8e5-b744-4d19-9e22-f366f16f5c88.jpeg: cannot identify image file <_io.BytesIO object at 0x000001847C062E30>` ... (as an example.)
-  3. Error occurred on `https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/edb375b8-e520-45f8-15ca-fad3a2b36100/width=2048/edb375b8-e520-45f8-15ca-fad3a2b36100.jpeg: cannot write mode P as JPEG` ... (as an example.)
- 
-# civitai-image-scraper
-Downloads bulk images from Civitai that have a reaction count for a specific emoji reaction greater than your variable
-Filters images in the response to only those that include a Prompt, saves the prompt as a caption text file matching the image name.
-Outputted results are almost suitable for training. LORA's are included in prompts so to do is a toggle to remove LORA's from the saved text file, for now you can remove them manually if using this for training
+This document outlines the key changes and enhancements made in the second version of the Civitai Image Scraper script compared to the first version. These improvements aim to enhance performance, robustness, and functionality.
 
+## Key Changes and Enhancements
 
-# How to modify
-Line 21, `directory = "civitai-images"` change to you directory.
+1. **Multithreading for Concurrent Downloading:**
+   The second script utilizes multithreading with the 'concurrent.futures' library, allowing concurrent downloading and processing of images and metadata. This significantly improves the overall speed of the scraping process.
 
-Line 23, `parent_dir = "C:\\"` change to you Parent Directory path
+2. **Enhanced Error Handling and Logging:**
+   The enhanced script features comprehensive error handling for various exceptions, such as UnidentifiedImageError, ConnectionError, and other request-related errors. Detailed error logs are maintained for analysis and debugging.
 
-Line 37, `api_key = "xxxxxxx"` change to your API key from Civitai account settings.
+3. **Support for Multiple Image Formats:**
+   The script supports both JPEG and PNG image formats. Images are converted to RGB mode if necessary, and the appropriate format is chosen based on the image's attributes.
 
-Line 78, `if image['stats']['heartCount'] > 10`
+4. **Complete Metadata Storage:**
+   In addition to saving the 'prompt' field, the enhanced script saves the entire 'meta' dictionary in a separate text file. This ensures that all available image metadata is captured and preserved.
 
-You can change the reaction type from heartCount to any other supported in the API 
+5. **Modular and Readable Script Structure:**
+   The script's structure has been reorganized for improved modularity and readability. Functions are organized logically, and detailed comments are provided to explain each section's purpose and functionality.
+
+6. **Flexible Directory Structure:**
+   The 'parent_dir' and 'directory' variable allows users to specify the directory where images and metadata will be saved. This provides flexibility in choosing the location of the downloaded files.
+
+7. **downloaded image ID:**
+   The script will now save the IDs of the images to a file so that when you run the file more then once, it will not redownload those files.
+
+## Usage
+
+To use the enhanced script, follow these steps:
+
+1. Clone the repository.
+2. Install dependencies from 'requirements.txt'.
+3. Replace the 'api_key' variable with your Civitai API key. Line 37
+4. Specify the desired directory in the 'directory' variable. Line 18
+5. Specify the desired parent directory in the 'parent_dir' variable. Line 24
+6. You can change the reaction type from heartCount to any other supported in the API. Line 183 `if image['stats']['heartCount'] > 10`
 At the time of this script creation, the supported reaction types are:
 
         "cryCount"
-
         "laughCount"
-        
         "likeCount"
-        
         "dislikeCount"
-        
         "heartCount"
-        
         "commentCount"
-        
-https://github.com/civitai/civitai/wiki/REST-API-Reference#get-apiv1images
+When I ran this script with a heart count of > 10 it generated 
+14.6 GB and a file count of 167,668, including log files.
+See [https://github.com/civitai/civitai/wiki/REST-API-Reference#get-apiv1images](apiv1images)
+6. Run the script and enjoy faster, more robust image scraping!
 
-# How to run
-`pip install -r requirements.txt`
+## Credits
 
-Replace line 37 API key with your API key
-
-`python civitai-image-scraper.py`
-
-
-
-# example![brave_0a4zJ0eXOn](https://user-images.githubusercontent.com/119671806/231275932-66eff47f-1073-4ce5-a0e4-c90b5ff8a145.gif)
+Original work by Hassan-sd. Enhancements and documentation by whitevamp.

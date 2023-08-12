@@ -37,13 +37,14 @@ To use the enhanced script, follow these steps:
 6. You can change the reaction type from heartCount to any other supported in the API.
     - Line 183 `if image['stats']['heartCount'] > 10`
      - At the time of this script creation, the supported reaction types are:
-
+         ```
         "cryCount"
         "laughCount"
         "likeCount"
         "dislikeCount"
         "heartCount"
         "commentCount"
+         ```
 When I ran this script with a heart count of > 10 it generated 
 14.6 GB and a file count of 167,668, including log files.
 See [civitai API] (https://github.com/civitai/civitai/wiki/REST-API-Reference#get-apiv1images)

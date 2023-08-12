@@ -52,6 +52,6 @@ See [civitai API] (https://github.com/civitai/civitai/wiki/REST-API-Reference#ge
 ## Credits
 
 Original work by Hassan-sd. Enhancements and documentation by whitevamp.
-First list item
+100. First list item
        - First nested list item
          - Second nested list item

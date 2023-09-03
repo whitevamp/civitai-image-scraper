@@ -1,4 +1,3 @@
-* Even though very little of the original code remains, credit goes to sd_hassan for the original script.
 # I bring you version 2 and compleate rewrite to the script.
 
 This document outlines the key changes and enhancements made in the second version of the Civitai Image Scraper script compared to the first version. These improvements aim to enhance performance, robustness, and functionality.

@@ -1,3 +1,4 @@
+# Even though very little of the original code remains, credit goes to sd_hassan for the original script.
 import concurrent.futures
 from io import BytesIO
 import numpy as np

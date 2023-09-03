@@ -30,7 +30,7 @@ This document outlines the key changes and enhancements made in the second versi
 To use the enhanced script, follow these steps:
 
 1. Clone the repository.
-2. Install dependencies from 'requirements.txt'. 'pip install -r requirements.txt'
+2. Install dependencies from 'requirements.txt'. `pip install -r requirements.txt`
 3. Replace the 'api_key' variable with your Civitai API key. Line 37
 4. Specify the desired directory in the 'directory' variable. Line 18
 5. Specify the desired parent directory in the 'parent_dir' variable. Line 24

@@ -1,0 +1,59 @@
+This document outlines the key changes and enhancements made in the second version of the Civitai Image Scraper script compared to the first version. These improvements aim to enhance performance, robustness, and functionality.
+
+### ver. 2.1 Changes Made to the Original Script
+1. **Configuration Constants**: Moved directory path and API key to constants for easy configuration.
+
+2. **Threshold Values**: Defined threshold values for various statistics using the `reaction_counts` dictionary.
+
+3. **Improved Comments**: Added detailed comments throughout the code for better understanding.
+
+4. **File Naming Convention**: Updated image and metadata file naming to sanitize special characters and prevent filename issues.
+
+5. **Metadata File Extension**: Renamed the metadata file extension from `.txt` to `_pos-prompt.txt` to better represent its purpose.
+
+6. **Code Cleanup**: Removed unnecessary code comments related to saving the entire 'meta' dictionary.
+
+7. **Image Handling**: Refactored the `download_image` function to handle different image modes and save images in either JPEG or PNG format.
+
+8. **Error Handling**: Simplified error handling, removing unnecessary code for handling `RequestException`.
+
+9. **Decompression Warning**: Added handling for the `DecompressionBombWarning` warning and logged it to a separate file.
+
+10. **Function Refactoring**: Reorganized and refactored the `main` function for better readability.
+
+11. **Filter Criteria Update**: Updated the condition for filtering images based on specific criteria to match new threshold values.
+
+12. **Redundant Code Removal**: Removed redundant code, such as checking for `image['meta'] is not None`, as it's already checked in the filter condition.
+
+13. **Progress Bar Enhancement**: Improved the progress bar in the ThreadPoolExecutor to display the total number of images and metadata files downloaded and saved.
+
+14. **Existing Image IDs**: Added a check for the existence of the downloaded image ID file and loaded existing image IDs.
+
+15. **ThreadPoolExecutor Update**: Replaced the use of `map` with a lambda function in the ThreadPoolExecutor for downloading images and metadata.
+
+16. **Message Clarity**: Updated print statements and messages throughout the code for better clarity.
+
+These changes were made to enhance code readability, maintainability, and functionality while preserving the core functionality of the original script.
+
+## ver 2.0 Key Changes and Enhancements
+
+1. **Multithreading for Concurrent Downloading:**
+   The second script utilizes multithreading with the 'concurrent.futures' library, allowing concurrent downloading and processing of images and metadata. This significantly improves the overall speed of the scraping process.
+
+2. **Enhanced Error Handling and Logging:**
+   The enhanced script features comprehensive error handling for various exceptions, such as UnidentifiedImageError, ConnectionError, and other request-related errors. Detailed error logs are maintained for analysis and debugging.
+
+3. **Support for Multiple Image Formats:**
+   The script supports both JPEG and PNG image formats. Images are converted to RGB mode if necessary, and the appropriate format is chosen based on the image's attributes.
+
+4. **Complete Metadata Storage:**
+   In addition to saving the 'prompt' field, the enhanced script saves the entire 'meta' dictionary in a separate text file. This ensures that all available image metadata is captured and preserved.
+
+5. **Modular and Readable Script Structure:**
+   The script's structure has been reorganized for improved modularity and readability. Functions are organized logically, and detailed comments are provided to explain each section's purpose and functionality.
+
+6. **Flexible Directory Structure:**
+   The 'parent_dir' and 'directory' variable allows users to specify the directory where images and metadata will be saved. This provides flexibility in choosing the location of the downloaded files.
+
+7. **downloaded image ID:**
+   The script will now save the IDs of the images to a file so that when you run the file more then once, it will not redownload those files.
